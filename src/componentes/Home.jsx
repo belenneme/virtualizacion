@@ -17,7 +17,7 @@ export default function Home() {
 
     const getUsuarios = async() => {
         try {
-            const resp = await fetch("http://192.168.88.131:3008/usuarios", {
+            const resp = await fetch("http://192.168.88.165:3008/usuarios", {
                 method: "GET",
                 headers: {
                   "Content-type": "application/json; charset=UTF-8"
