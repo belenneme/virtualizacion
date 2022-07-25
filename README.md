@@ -1,21 +1,4 @@
-# ProyectoCurson
-Repositorio creado para el desarrollo en equipo de CursOn utilizando React Js y Bootstrap 4.5
-
-***Curson** es un sitio web que tiene como finalidad ser un nexo entre aquellos que tienen un curso para ofrecer y por otro lado, para quienes desean aprender algo nuevo sobre una especialidad.*
-
-# Demo: 
-- https://curson.netlify.app
-
-## Table of Contents
-
-- [Getting Started](#installation)
-  * [Prerequisites](#prerequisites)
-  * [Project Setup](#install-project)
-- [Repo Owners](#repo-owners)
-- [Repo Owners](#teams-involved)
-- [Usage](#usage)
-
-## <a name="section-installation">Getting Started</a>
+## <a>Getting Started</a>
 
 ### Prerequisites
 
@@ -34,22 +17,6 @@ Recommended
 3. npm install --save react-router-dom
 4. npm install react-icons
 ```
-
-## <a name="repo-owners">Repo Owners</a>
-
-* Florencia Pistan
-* Rodrigo
-* Gabriel Moreira
-* Mary
-* Lean
-* Belén Neme
-
-Estudiantes de Full Stack Web Dev en RollingCode School, Argentina.
-
-## <a name="teams-involved">Teams involved</a>
-
-* Not Defined
-
 ## <a name="usage">Usage</a>
 
 ### Run Project
