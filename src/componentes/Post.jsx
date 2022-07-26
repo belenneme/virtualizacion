@@ -29,7 +29,7 @@ export default function Footer() {
 
     const getCategorias = async() => {
         try {
-            const resp = await fetch("http://192.168.88.165:3008/categoria", {
+            const resp = await fetch("http://localhost:3008/categoria", {
                 method: "GET",
                 headers: {
                   "Content-type": "application/json; charset=UTF-8"
@@ -51,9 +51,9 @@ export default function Footer() {
               });
         }
     }
-/*     useEffect(() => {
+     useEffect(() => {
         getCategorias();
-    }, []); */
+    }, []);
 
     return (
         <div className="container-md"> 
@@ -172,40 +172,25 @@ Se utiliza principalmente del lado del cliente, implementado como parte de un na
                         </div>
                         <div className='col-12'>
                             <div className='row'>
-                            {/* {categorias.datos.map((categoria) => { */}
-                                {/* return( */}
+                             {categorias.datos.map((categoria) => { 
+                                 return(
                                 <div className='col-6 my-5'>
                                     <div className="card card-multicolor">
                                         <div className="row no-gutters d-flex justify-content-center">
                                             <div className="col-10 col-md-8">
                                                 <div className="card-body">
                                                     <h5 className="card-text text-center mt-2 mb-1">Detalles del Contenedor</h5>
-                                                    <h5 className="card-text mt-2">Nombre: 39698637db</h5>
-                                                    <h5 className="card-text mt-2">CPU: 1 nucleo</h5>
-                                                    <h5 className="card-text mt-2">Memoria: 512 MB</h5>
-                                                    <h5 className="card-text mt-2">Almacenamiento: 4 GB</h5>
+                                                    <h5 className="card-text mt-2">Nombre: {categoria.nombre}</h5>
+                                                    <h5 className="card-text mt-2">CPU: {categoria.cpu}</h5>
+                                                    <h5 className="card-text mt-2">Memoria: {categoria.memoria}</h5>
+                                                    <h5 className="card-text mt-2">Almacenamiento: {categoria.almacenamiento}</h5>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className='col-6 my-5'>
-                                    <div className="card card-multicolor">
-                                        <div className="row no-gutters d-flex justify-content-center">
-                                            <div className="col-10 col-md-8">
-                                                <div className="card-body">
-                                                    <h5 className="card-text text-center mt-2 mb-1">Detalles del Contenedor</h5>
-                                                    <h5 className="card-text mt-2">Nombre: 39698637i</h5>
-                                                    <h5 className="card-text mt-2">CPU: 1 nucleo</h5>
-                                                    <h5 className="card-text mt-2">Memoria: 512 MB</h5>
-                                                    <h5 className="card-text mt-2">Almacenamiento: 2 GB</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                {/* ); */}
-                            {/* })} */}
+                                 ); 
+                             })}
                             </div>
                         </div>
                     </div>

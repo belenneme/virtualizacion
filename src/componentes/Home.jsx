@@ -13,7 +13,7 @@ export default function Home() {
     
     const getUsuarios = async() => {
         try {
-            const resp = await fetch("http://192.168.88.165:3008/usuarios", {
+            const resp = await fetch("http://localhost:3008/usuarios", {
                 method: "GET",
                 headers: {
                   "Content-type": "application/json; charset=UTF-8"
@@ -35,14 +35,14 @@ export default function Home() {
         }
     }
 
-/*     useEffect(() => {
+     useEffect(() => {
         getUsuarios();
-    }, []); */
+    }, []); 
 
     return (
         <>
-          {/* {lista.datos.map((user) => { */}
-            {/* return( */}
+           {lista.datos.map((user) => { 
+             return( 
             <div className="d-flex justify-content-center align-items-center my-5">
               <div className="col-md-8 mt-5 mb-5 d-flex justify-content-center align-items-center">
                 <div className="card card-multicolor">
@@ -50,11 +50,11 @@ export default function Home() {
                     <div className="col-10 col-md-8">
                       <div className="card-body">
                         <h3 className="card-title text-center mt-3 mb-5">¡Bienvenidos a mi blog!</h3>
-                        <h5 className="card-title mt-5">Nombre: Maria Belen</h5>
-                        <h5 className="card-title mt-2">Apellido: Neme</h5>
-                        <h5 className="card-text mt-2"> Email: maria.neme@alu.frt.utn.edu.ar</h5>
-                        <h5 className="card-title mt-2">Legajo: 42215</h5>
-                        <h5 className="card-title mt-2">Carrera: Ingenieria en sistemas</h5>
+                        <h5 className="card-title mt-5">Nombre: {user.nombre}</h5>
+                        <h5 className="card-title mt-2">Apellido: {user.apellido}</h5>
+                        <h5 className="card-text mt-2"> Email: {user.email}</h5>
+                        <h5 className="card-title mt-2">Legajo: {user.legajo}</h5>
+                        <h5 className="card-title mt-2">Carrera: {user.carrera}</h5>
                       </div>
                     </div>
                     <div className="col-10 col-md-4 d-flex justify-content-center align-items-center">
@@ -69,8 +69,8 @@ export default function Home() {
                 </div>
               </div>
               </div>
-            {/* ); */}
-          {/* })} */}
+             ); 
+           })}
         </>
       );
 }
