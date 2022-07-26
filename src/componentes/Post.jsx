@@ -10,6 +10,11 @@ import MongoDBLogo from '../img/mongo.png';
 import CreateContainer from '../img/createContainer.png';
 import NodeInstallation from '../img/nodeInstallation.png';
 import NodeInstallation2 from '../img/nodeInstallation2.png';
+import GitInstallation from '../img/gitInstallation.png';
+import CurlInstallation from '../img/curlInstallation.png';
+import CategoriaCollection from '../img/categoriaCollection.png';
+import CategoriaCollection2 from '../img/categoriaCollection2.png';
+import UsuarioCollection from '../img/usuarioCollection.png';
 import Pdf from '../doc/TrabajoFinal.pdf';
 import '../css/footer.css';
 import '../css/reviews.css'
@@ -21,10 +26,6 @@ export default function Footer() {
         error: null,
         loading: true,
       });
-    
-    useEffect(() => {
-        getCategorias();
-    }, []);
 
     const getCategorias = async() => {
         try {
@@ -50,6 +51,10 @@ export default function Footer() {
               });
         }
     }
+/*     useEffect(() => {
+        getCategorias();
+    }, []); */
+
     return (
         <div className="container-md"> 
             <div>
@@ -167,25 +172,40 @@ Se utiliza principalmente del lado del cliente, implementado como parte de un na
                         </div>
                         <div className='col-12'>
                             <div className='row'>
-                            {categorias.datos.map((categoria) => {
-                                return(
+                            {/* {categorias.datos.map((categoria) => { */}
+                                {/* return( */}
                                 <div className='col-6 my-5'>
                                     <div className="card card-multicolor">
                                         <div className="row no-gutters d-flex justify-content-center">
                                             <div className="col-10 col-md-8">
                                                 <div className="card-body">
                                                     <h5 className="card-text text-center mt-2 mb-1">Detalles del Contenedor</h5>
-                                                    <h5 className="card-text mt-2">Nombre: {categoria.nombre}</h5>
-                                                    <h5 className="card-text mt-2">CPU: {categoria.cpu}</h5>
-                                                    <h5 className="card-text mt-2">Memoria: {categoria.memoria}</h5>
-                                                    <h5 className="card-text mt-2">Almacenamiento: {categoria.almacenamiento}</h5>
+                                                    <h5 className="card-text mt-2">Nombre: 39698637db</h5>
+                                                    <h5 className="card-text mt-2">CPU: 1 nucleo</h5>
+                                                    <h5 className="card-text mt-2">Memoria: 512 MB</h5>
+                                                    <h5 className="card-text mt-2">Almacenamiento: 4 GB</h5>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                );
-                            })}
+                                <div className='col-6 my-5'>
+                                    <div className="card card-multicolor">
+                                        <div className="row no-gutters d-flex justify-content-center">
+                                            <div className="col-10 col-md-8">
+                                                <div className="card-body">
+                                                    <h5 className="card-text text-center mt-2 mb-1">Detalles del Contenedor</h5>
+                                                    <h5 className="card-text mt-2">Nombre: 39698637i</h5>
+                                                    <h5 className="card-text mt-2">CPU: 1 nucleo</h5>
+                                                    <h5 className="card-text mt-2">Memoria: 512 MB</h5>
+                                                    <h5 className="card-text mt-2">Almacenamiento: 2 GB</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/* ); */}
+                            {/* })} */}
                             </div>
                         </div>
                     </div>
@@ -212,6 +232,10 @@ Se utiliza principalmente del lado del cliente, implementado como parte de un na
                                         <li>echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list</li>
                                         <li>apt update</li>
                                         <li>apt install mongodb-org</li>
+                                        <li>se inicializo el servicio de mongo db con "systemctl start mongod"</li>
+                                        <li>se realizo la creacion de la base de datos con "use virtualizacion"</li>
+                                        <li>se realizo la creacion de dos tablas o colleciones con el comando "db.createCollection("usuarios") y db.createCollection("categorias")"</li>
+                                        <li>se añadieron los registros correspondientes en cada tabla</li>
                                     </ul>
                                 <li className='my-2'>Se realizo la instalacion de git para poder clonar el proyecto donde tenemos alojada nuestra API que permitira la conexion a la DB</li>
                                     <ul>
@@ -220,8 +244,11 @@ Se utiliza principalmente del lado del cliente, implementado como parte de un na
                             </ol>
                         </div>
                         <div className='col-6'>
-                            <img className="img-fluid my-2" src={NodeInstallation} alt="steps-node" />
+                            <img className="img-fluid my-2" src={CurlInstallation} alt="steps-node" />
                             <img className="img-fluid my-2" src={NodeInstallation2} alt="steps-node" />
+                            <img className="img-fluid my-2" src={CategoriaCollection} alt="steps-node" />
+                            <img className="img-fluid my-2" src={CategoriaCollection2} alt="steps-node" />
+                            <img className="img-fluid my-2" src={UsuarioCollection} alt="steps-node" />
                         </div>
                     </div>
                 </div>
@@ -249,7 +276,7 @@ Se utiliza principalmente del lado del cliente, implementado como parte de un na
                         </div>
                         <div className='col-6'>
                             <img className="img-fluid my-2" src={NodeInstallation} alt="steps-node" />
-                            <img className="img-fluid my-2" src={NodeInstallation2} alt="steps-node" />
+                            <img className="img-fluid my-2" src={GitInstallation} alt="steps-node" />
                         </div>
                     </div>
                 </div>
@@ -266,7 +293,7 @@ Se utiliza principalmente del lado del cliente, implementado como parte de un na
                         <li>Clonamos el proyecto donde tenemos alojada nuestro frontend con el comando "git clone"</li>
                         <li>Una vez clonado el proyecto, accedemos al mismo y ejecutamos "npm install" para descargar todas las dependencias necesarias</li>
                         <li>Para levantar la API, ejecutamos "npm start"</li>
-                        <li>Accedemos a la ip publica del mismo, y debemos comprobar que el blog se encuentra en servicio</li>
+                        <li>Accedemos a la ip publica del mismo (http://bejuca.hopto.org:11029/), y debemos comprobar que el blog se encuentra en servicio</li>
                     </ol>
                 </div>
             </div>

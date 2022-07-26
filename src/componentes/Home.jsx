@@ -11,10 +11,6 @@ export default function Home() {
         loading: true,
       });
     
-    useEffect(() => {
-        getUsuarios();
-    }, []);
-
     const getUsuarios = async() => {
         try {
             const resp = await fetch("http://192.168.88.165:3008/usuarios", {
@@ -39,22 +35,26 @@ export default function Home() {
         }
     }
 
+/*     useEffect(() => {
+        getUsuarios();
+    }, []); */
+
     return (
         <>
-          {lista.datos.map((user) => {
-            return(
+          {/* {lista.datos.map((user) => { */}
+            {/* return( */}
             <div className="d-flex justify-content-center align-items-center my-5">
-              <div key={user._id} className="col-md-8 mt-5 mb-5 d-flex justify-content-center align-items-center">
+              <div className="col-md-8 mt-5 mb-5 d-flex justify-content-center align-items-center">
                 <div className="card card-multicolor">
                   <div className="row no-gutters d-flex justify-content-center">
                     <div className="col-10 col-md-8">
                       <div className="card-body">
                         <h3 className="card-title text-center mt-3 mb-5">¡Bienvenidos a mi blog!</h3>
-                        <h5 className="card-title mt-5">Nombre: {user.nombre}</h5>
-                        <h5 className="card-title mt-2">Apellido: {user.apellido}</h5>
-                        <h5 className="card-text mt-2"> Email: {user.email}</h5>
-                        <h5 className="card-title mt-2">Legajo: {user.legajo}</h5>
-                        <h5 className="card-title mt-2">Carrera: {user.carrera}</h5>
+                        <h5 className="card-title mt-5">Nombre: Maria Belen</h5>
+                        <h5 className="card-title mt-2">Apellido: Neme</h5>
+                        <h5 className="card-text mt-2"> Email: maria.neme@alu.frt.utn.edu.ar</h5>
+                        <h5 className="card-title mt-2">Legajo: 42215</h5>
+                        <h5 className="card-title mt-2">Carrera: Ingenieria en sistemas</h5>
                       </div>
                     </div>
                     <div className="col-10 col-md-4 d-flex justify-content-center align-items-center">
@@ -69,8 +69,8 @@ export default function Home() {
                 </div>
               </div>
               </div>
-            );
-          })}
+            {/* ); */}
+          {/* })} */}
         </>
       );
 }
