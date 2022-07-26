@@ -284,13 +284,13 @@ Se utiliza principalmente del lado del cliente, implementado como parte de un na
                     <h5>Prueba y Ejecucion</h5>
                     <p>Desde nuestro contenedor de la Base de Datos, realizamos las siguientes instrucciones:</p>
                     <ol>
-                        <li>Clonamos el proyecto donde tenemos alojada nuestra API con el comando "git clone"</li>
+                        <li>Clonamos el proyecto donde tenemos alojada nuestra API con el comando "git clone https://github.com/belenneme/virtualizacion-db.git"</li>
                         <li>Una vez clonado el proyecto, accedemos al mismo y ejecutamos "npm install" para descargar todas las dependencias necesarias</li>
                         <li>Para levantar la API, ejecutamos "npm start"</li>
                     </ol>
                     <p>Desde nuestro contenedor dedicado a la interfaz, realizamos las siguientes instrucciones:</p>
                     <ol>
-                        <li>Clonamos el proyecto donde tenemos alojada nuestro frontend con el comando "git clone"</li>
+                        <li>Clonamos el proyecto donde tenemos alojada nuestro frontend con el comando "git clone https://github.com/belenneme/virtualizacion.git"</li>
                         <li>Una vez clonado el proyecto, accedemos al mismo y ejecutamos "npm install" para descargar todas las dependencias necesarias</li>
                         <li>Para levantar la API, ejecutamos "npm start"</li>
                         <li>Accedemos a la ip publica del mismo (http://bejuca.hopto.org:11029/), y debemos comprobar que el blog se encuentra en servicio</li>
